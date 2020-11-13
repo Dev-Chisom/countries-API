@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --Dark-Blue-Elements: hsl(209, 23%, 22%);
+  --Very-Dark-Blue-Background: hsl(207, 26%, 17%);
+  --Very-Dark-Blue-Text: hsl(200, 15%, 8%);
+  --Dark-Gray-Input: hsl(0, 0%, 52%);
+  --Very-Light-Gray-Background: hsl(0, 0%, 98%);
+  --White: hsl(0, 0%, 100%);
+}
+
+body {
+  background-color: var(--Very-Light-Gray-Background);
+  color: var(--Very-Dark-Blue-Text);
+  position: relative;
+  transition: background 0.2s linear;
+}
+
+.label {
+  background-color: #111;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  border-radius: 50px;
+  padding: 5px;
+  height: 26px;
+  width: 50px;
+  transform: scale(1.5);
+  margin: 10px;
+}
+.fa-moon {
+  color: #f1c40f;
+}
+.fa-sun {
+  color: #f39c12;
+}
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+.checkbox:checked + .label .ball {
+  /* background-color: purple; */
+  transform: translateX(24px);
+}
+.ball {
+  background-color: #fff;
+  position: absolute;
+  border-radius: 50%;
+  left: 2px;
+  top: 2px;
+  height: 22px;
+  width: 22px;
+  transition: transform 0.2s linear;
+}
+
+body.dark {
+  background-color: var(--Very-Dark-Blue-Background);
+  color: var(--White);
+}
+
+body.dark td {
+  color: var(--White);
+}
+#loader {
+  border: 12px solid var(--White);
+  border-radius: 50%;
+  border-top: 12px solid var(--Very-Dark-Blue-Background);
+  width: 70px;
+  height: 70px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.center {
+  position: absolute;
+  top: 20em;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+/* .table {
+  width: 100%;
+  margin-bottom: 1rem;
+  color: #212529;
+} */
+.table {
+  width: 100%;
+  /* margin-top: 2rem; */
+  border-collapse: collapse;
+  border-spacing: 0;
+  /* background: #000; */
+}
+.table thead th {
+  text-transform: uppercase;
+  padding: 0.8rem;
+  color: #fff;
+  border-bottom: 1px solid var(--White);
+}
+.thead-dark {
+  background-color: var(--Very-Dark-Blue-Background);
+}
+.table tbody tr td {
+  color: #999;
+  padding: 0.8rem 1.2rem;
+  text-align: center;
+  border-bottom: 1px solid var(--White);
+}
+.table tbody tr td:first-child {
+  text-align: left;
+}
+.table tbody tr:nth-child(odd) {
+  background-color: var(--Very-Dark-Blue-Background);
+}
