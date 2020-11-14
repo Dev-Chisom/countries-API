@@ -65,7 +65,7 @@ body.dark {
 body.dark td {
   color: var(--White);
 }
-#loader {
+/* #loader {
   border: 12px solid var(--White);
   border-radius: 50%;
   border-top: 12px solid var(--Very-Dark-Blue-Background);
@@ -87,7 +87,7 @@ body.dark td {
   left: 0;
   right: 0;
   margin: auto;
-}
+} */
 /* .table {
   width: 100%;
   margin-bottom: 1rem;
@@ -120,4 +120,23 @@ body.dark td {
 }
 .table tbody tr:nth-child(odd) {
   background-color: var(--Very-Dark-Blue-Background);
+}
+.loading-bar {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('http://i.stack.imgur.com/FhHRx.gif');
+  background-position: 50% 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  background-repeat: no-repeat;
+}
+body.loading {
+  overflow: hidden;
+}
+body.loading .loading-bar {
+  display: block;
 }
