@@ -45,5 +45,11 @@ getCountries().then((data)=> {
         
         )
         .catch(error => {
-            document.write( `There is an error in getting your data: ${error.message}`);
+           
+            const errorMessage =`There was an error in getting your data: ${error.message} `;
+
+            error.innerHTML = errorMessage;
+
+            alert(errorMessage)
+           
         });

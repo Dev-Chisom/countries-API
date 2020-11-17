@@ -121,7 +121,7 @@ body.dark td {
 .table tbody tr:nth-child(odd) {
   background-color: var(--Very-Dark-Blue-Background);
 }
-.loading-bar {
+.loadingBar {
   display: none;
   position: fixed;
   z-index: 1000;
@@ -137,6 +137,6 @@ body.dark td {
 body.loading {
   overflow: hidden;
 }
-body.loading .loading-bar {
+body.loading .loadingBar {
   display: block;
 }
